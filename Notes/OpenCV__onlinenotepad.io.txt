@@ -1,0 +1,166 @@
+ML
+
+Unit 5: Image Filtering Operations & Computer Vision using OpenCV
+
+
+
+OpenCV:
+
+
+
+identifies real time faces from live camera
+
+
+
+Image Filtering (blur imges)
+
+
+
+🙂 Image Filtering :
+
+
+
+Digital Image: 
+
+Image made of servral pixels
+
+
+
+pixels are organized in ordered rectangular array
+
+
+
+size of image is determined by dimensions of pixel array
+
+
+
+pixel is a matrix of M Rows X N Columns
+
+
+
+🙂 Concolution:
+
+process of scanning image patterns (filters)
+
+
+
+identifies edges, corner , shape
+
+
+
+CNNs (Convolutional Neural Networks)
+
+
+
+simple mathematical openration
+
+
+
+a way of multiplying together two arrays of numbers (matrix multiplication)  (multiplicaiton of source image and convolution image)
+
+
+
+size of convolution must be small then image size
+
+
+
+matrix is called kernel
+
+
+
+process of appling the kernel on the image is known as image filtering - output image is known as filtered image
+
+
+
+it's whatNNs to see liek human would see.
+
+
+
+matrix -> array -> kernel (which is used for filtering ) - known as filter
+
+
+
+source image (16 X 16):                                                                                   
+
+
+
+9 elements are active  
+
+ Kernel  / Filter (9 X 9) :
+
+calculation:
+
+Step - 1:
+
+(30 * -1) + (40 * 0)+(50 * 1) +
+
+... +
+
+...
+
+
+
+step - 2:
+
+= -30 + 0+ 50  +
+
+...
+
+...
+
+= 80
+
+
+
+first program:
+
+
+
+
+
+cvt = convert color : para -> cource image , in BGR formate to RGB formate
+
+ddepth : source image depth should continue in output , 
+
+ex: ui - 64 , 32 ,uf - 64, 32
+
+
+
+subplot : 2 subplots - 1->  source image
+
+2-> filter image
+
+
+
+(1,2,1) -> raw , colunm , posN  -> 1 raw , 2 part , 1st position -> img
+
+(1,2,2) -> raw , colunm , posN  -> 1 raw , 2 part , 2nd position -> k1output
+
+
+
+
+
+blur image:
+
+
+
+# numpy gives one function ones()
+
+it converts all element to 1
+array limit is (4,4) 
+
+
+#numpy float32
+
+convert it to float 32, 8 * 4 = 32
+
+
+
+all elemetns will be devided by 16 : [ 0.625 , 0.625 ......
+
+     .........
+
+    .......]
+
+
+
