@@ -6,6 +6,40 @@ Unit 5: Image Filtering Operations & Computer Vision using OpenCV
 
 OpenCV:
 
+Image Processing :
+
+-> image filtering 
+
+constrast
+
+
+
+sharpness
+
+
+
+bluring
+
+-> image identification
+
+animal
+
+
+
+face
+
+
+
+nose
+
+
+
+eyes
+
+
+
+no plate 
+
 
 
 identifies real time faces from live camera
@@ -150,7 +184,7 @@ it converts all element to 1
 array limit is (4,4) 
 
 
-#numpy float32
+#nump y float32
 
 convert it to float 32, 8 * 4 = 32
 
@@ -158,9 +192,148 @@ convert it to float 32, 8 * 4 = 32
 
 all elemetns will be devided by 16 : [ 0.625 , 0.625 ......
 
+
+
      .........
 
     .......]
+
+
+
+#motion blur
+
+
+
+numpy.zeros() -> x by x array will be made and given zero to all(size , size)-> m,n (m = raws, n= columns)
+
+----- ----- ----- ----- -----
+
+  0     0     0     0     0
+
+  0     0     0     0     0
+
+  0     0     0     0     0
+
+  0     0     0     0     0
+
+  0     0     0     0     0
+
+----- ----- ----- ----- -----
+
+numpy.ones() -> makes selected/given all element one
+
+
+
+in image center element is most imp - center most element 
+
+
+
+What do you mean by Blur:
+we need to big the size of kernel  - sharpe the img
+
+
+
+Blur:
+
+
+
+blur i image - processing refers to the reduction of sharpness or clarity in img
+
+
+
+spreading pixels in an image to reduce details and noice
+
+
+
+
+
+$ type of blur:
+
+box(averaginf filter)
+
+gaussian
+
+median
+
+motion
+
+
+
+Box:
+
+
+
+cal avg of pixel in rectangle or sqaure area aroiund central pixel
+
+
+
+simpler approach
+
+
+
+for each [pixel in img - all pixel values summed and divided by total number of pixels in box
+
+
+
+
+
+Gaussian:
+
+
+
+Median:
+
+avrging method
+
+   
+
+Motion:
+
+for horiozontal - middle row must be 111 rest of 0
+
+
+
+for vertical - middle column must be 111 rest of 0
+
+
+
+ex: moving vehical effect 
+
+
+
+
+
+Edge Detection:
+
+in digital images edges correspond to abrupt changes in pixel brightness or color.
+
+sudden raise of pixels
+
+
+
+suddent fall of pixels
+
+
+
+types of edge detection filters:
+
+Sobel (horizontal , vertical)
+
+
+
+Laplacian
+
+
+
+Canny
+
+
+
+sobel 😀
+
+scanning done from both side : horizontal(x) , vertical(y) - 2 Kernels  
+
+default kernel size : 3
 
 
 
